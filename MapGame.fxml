@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.input.* ?>
+
+<VBox fx:controller="MapGameController" xmlns:fx="http://javafx.com/fxml"
+      onKeyPressed="#keyAction">
+  <padding>
+    <Insets top="10" right="10" bottom="10" left="10"/>
+  </padding>
+  
+  <children>
+    <HBox prefHeight="50">
+      <children>
+	<GridPane xmlns:fx="http://javafx.com/fxml" alignment="center" hgap="10" vgap="10">
+	  <Button text="↑" GridPane.rowIndex="0" GridPane.columnIndex="1" onAction="#upButtonAction"/>
+	  <Button text="←" GridPane.rowIndex="1" GridPane.columnIndex="0" onAction="#leftButtonAction"/>
+	  <Button text="→" GridPane.rowIndex="1" GridPane.columnIndex="2" onAction="#rightButtonAction" />
+	  <Button text="↓" GridPane.rowIndex="2" GridPane.columnIndex="1" onAction="#downButtonAction" />
+	</GridPane>
+	<VBox>
+	  <children>
+	    <HBox>
+	      <children>
+		<Button text="random" prefWidth="100" onAction="#func1ButtonAction"/>
+		<Button text="toKey1Step" prefWidth="100" onAction="#func2ButtonAction"/>
+		<Button text="toGoal1Step" prefWidth="100" onAction="#func3ButtonAction"/>
+		<Button text="func4" prefWidth="100" onAction="#func4ButtonAction"/>
+		<Button text="func5" prefWidth="100" onAction="#func5ButtonAction"/>
+	      </children>
+	    </HBox>
+	    <HBox>
+	      <children>
+		<Button text="init" prefWidth="100" onAction="#func6ButtonAction"/>
+		<Button text="toKey" prefWidth="100" onAction="#func7ButtonAction"/>
+		<Button text="toGoal" prefWidth="100" onAction="#func8ButtonAction"/>
+		<Button text="func9" prefWidth="100" onAction="#func9ButtonAction"/>
+		<Button text="func10" prefWidth="100" onAction="#func10ButtonAction"/>
+	      </children>
+	    </HBox>
+	  </children>
+	</VBox>
+      </children>
+    </HBox>
+    <GridPane fx:id="mapGrid" prefWidth="360" prefHeight="360" >
+    </GridPane>
+
+  </children>
+</VBox>
